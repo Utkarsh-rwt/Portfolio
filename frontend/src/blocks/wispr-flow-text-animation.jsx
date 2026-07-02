@@ -2,9 +2,10 @@
 import { useCallback, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
-const LEFT_TEXT =
-  "Umm, hope your week has started well…I was talking to Cheyene earlier but reception was really bad and I think their going to handle the first part of the project, but I\u2019m not totally sure. Also, I told the team the the new timeline should be ready by Friday, although it\u2019s probably going to slip. There\u2019s been a lot of back and forth and honestly the the whole thing\u2019s been kind of chaotic, like nobody really knows what\u2019s going on so can you check in with them and see if the notes from yesterday\u2019s meeting were sent out, or if they\u2019re still waiting. I think Cheyene mentioned it but didn\u2019t confirm, and now I\u2019m a little lost.";
 
+  const LEFT_TEXT = `
+Hi, I'm Utkarsh Rawat, a Computer Science student and full-stack developer passionate about building software that solves real-world problems. I enjoy transforming ideas into fast, modern, and intuitive web applications using React, Tailwind CSS, Node.js, Express.js, MongoDB, and JavaScript. I love creating clean user interfaces, designing scalable backend systems, exploring new technologies, and continuously improving my problem-solving skills through Data Structures and Algorithms. Whether it's developing interactive user experiences, optimizing application performance, or learning emerging technologies, I'm always excited to take on new challenges. Currently, I'm focused on mastering full-stack development, strengthening my DSA skills, contributing to meaningful projects, and preparing for software engineering internships. Outside of coding, I enjoy exploring open-source projects, participating in coding contests, experimenting with new ideas, and constantly learning something new. Thanks for visiting my portfolio, and I hope you enjoy exploring my work as much as I enjoyed building it.
+`;
 const VIEW_W = 1048;
 const VIEW_H = 594;
 
@@ -319,7 +320,7 @@ export const Hero = ({
             transition={{
               layout: { type: "spring", bounce: 0, duration: 0.35 },
             }}
-            className="absolute inset-x-0 top-4 right-60 mx-auto w-fit rounded-full bg-sky-500 px-5 py-2 text-sm font-medium text-white shadow-sm ring-1 ring-sky-500/10 transition-colors hover:bg-sky-600">
+            className="absolute inset-x-0 top- right-60 mx-auto w-fit rounded-full bg-sky-500 px-5 py-2 text-sm font-medium text-white shadow-sm ring-1 ring-sky-500/10 transition-colors hover:bg-sky-600">
             <motion.p
               initial={{ opacity: 0, filter: "blur(4px)" }}
               animate={{ opacity: 1, filter: "blur(0px)" }}
