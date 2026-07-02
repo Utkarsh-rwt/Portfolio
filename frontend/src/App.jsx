@@ -1,27 +1,26 @@
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 
-import About from './components/About'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
+import About from './components/About.jsx'
+import Projects from './pages/projects.jsx'
+import Skills from './pages/skills.jsx'
+import Blogs from './pages/blogs.jsx'
 
 const App = () => {
   return (
     <div className="app-shell">
-      <About/>
       <Navbar />
-      
 
       <main className="page-content">
         <Routes>
-          
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/blogs" element={<Blogs />} />
         </Routes>
       </main>
     </div>
-  )
-}
+  );
+};
 
 export default App

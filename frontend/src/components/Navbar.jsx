@@ -27,18 +27,20 @@ function Navbar({
         
         <MenuItem setActive={setActive} active={active} item="Skills" to="/skills">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/system-design">System Design</HoveredLink>
-            <HoveredLink href="/dsa">Data Structure And Algorithim</HoveredLink>
-            <HoveredLink href="/">AI/ML</HoveredLink>
+            <HoveredLink href="/skills#webdev">Web Development</HoveredLink>
+            <HoveredLink href="/skills#sysdesign">System Design</HoveredLink>
+            <HoveredLink href="/skills#dsa">Data Structure And Algorithim</HoveredLink>
+            <HoveredLink href="/skills#ai-ml">AI/ML</HoveredLink>
           </div>
         </MenuItem>
+
+
         <MenuItem setActive={setActive} active={active} item="Projects" to="/projects">
         <p>Featured</p>
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Git Views Map"
-              href="https://algochurn.com"
+              href="/project#gitviewsmap"
               src={gitviewsmap}
               description="Maps github visitors on a map made by using simple CRUD operations" />
             <ProductItem

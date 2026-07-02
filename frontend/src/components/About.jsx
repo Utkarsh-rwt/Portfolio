@@ -1,7 +1,11 @@
+import Hero from "@/blocks/wispr-flow-text-animation"
+
 const About = () => {
 	return (
-		<section className="w-full  rounded-3xl border border-stone-200 bg-[#fcfcfc] p-8 shadow-xl shadow-stone-200/70 sm:p-10 lg:p-12 ">
-			<div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start mt-12">
+		<section className="w-full  rounded-3xl border border-white bg-[#ffffff] p-8 shadow-xl shadow-stone-200/70 sm:p-10 lg:p-12  relative ">
+             <Hero className="absolute inset-0 z-0 left-30 top-20" />
+
+			<div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start mt-12 ">
 				<div>
 					
 					<h1 className="max-w-3xl text-4xl font-bold tracking-tight text-black sm:text-6xl lg:text-7xl">
@@ -47,10 +51,12 @@ const About = () => {
 							Resume
 						</a>
 					</div>
+                        
+                    
 
 				
 				</div>
-
+                
 				
 		
 						

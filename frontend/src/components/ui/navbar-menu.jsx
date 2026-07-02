@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-
+import { HashLink } from "react-router-hash-link";
 
 
 
@@ -80,7 +80,7 @@ export const ProductItem = ({
   src
 }) => {
   return (
-    <a href={href} className="flex space-x-2">
+    <HashLink smooth to={href} className="flex space-x-2">
       <img
         src={src}
         width={140}
@@ -95,8 +95,8 @@ export const ProductItem = ({
           {description}
         </p>
       </div>
-    </a>
-  );
+     </HashLink>
+  )
 };
 
 export const HoveredLink = ({
