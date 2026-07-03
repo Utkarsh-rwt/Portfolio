@@ -37,35 +37,8 @@ import {
 } from "react-icons/si";
 
 
-async function getLeetcode(){
-  const leetcodeURL= "https://leetcode.com/graphql/"
- 
-  const response = await fetch(leetcodeURL,{
-    method:"Post",
-    headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    operationName: "userContestBaseRating",
-    query: `
-      query userContestBaseRating($userSlug: String!) {
-        userContestBaseRating(username: $userSlug) {
-          rating
-        }
-      }
-    `,
-    variables: {
-      userSlug: "utkarsh-rwt"
-    }
-  })
-  })
 
-  const data = await response.json();
-  return data.data.userContestBaseRating.rating;
 
-  
- 
-}
  
 
 
@@ -73,26 +46,42 @@ async function getLeetcode(){
 
 const Skills = ()=>{
 
-   const [leetcodeRating, setLeetcodeRating] = useState(null);
-   useEffect(() => {
-        async function loadRating() {
-            const rating = await getLeetcode();
-            setLeetcodeRating(rating);
-        }
+ 
 
-        loadRating();
-    }, []);
+const [leetcodeRating, setLeetcodeRating] = useState(" fetching...")
+const [codeforcesRating, setCodeforcesRating] = useState(" fetching...")
+const [codechefRating, setCodechefRating] = useState(" fetching...")
 
-   
+
+useEffect(() => {
+  async function fetchRatings() {
+    try {
+      const [lc, cf, cc] = await Promise.all([
+        fetch("http://localhost:5000/leetcode/rating/utkarsh-rwt"),
+        fetch("http://localhost:5000/codeforces/rating/utkarshrawat"),
+        fetch("http://localhost:5000/codechef/rating/utkarshrawat"),
+      ]);
+
+      const leetcode = await lc.json();
+      const codeforces = await cf.json();
+      const codechef = await cc.json();
+
+      setLeetcodeRating(leetcode.rating);
+      setCodeforcesRating(codeforces.rating);
+      setCodechefRating(codechef.rating);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  fetchRatings();
+});
 
  return (
-        
-  
-
     <div className="mt-25">
     
 
-         <section className="border-t border-slate-200 bg-white  flex  ">
+         <section className="dsa border-t border-slate-200 bg-white  flex  ">
         <div className="mx-auto max-w-7.2xl ml-60 mr-4 px-4 py-14 flex-col   ">
             <div className="">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
@@ -118,7 +107,8 @@ const Skills = ()=>{
     <SiLeetcode className="text-3xl text-[#FFA116]" />
     <div>
       <p className="font-semibold">LeetCode</p>
-      <p className="text-sm text-slate-500">Rating:{leetcodeRating}</p>
+       <p className="text-sm text-slate-500">utkarsh-rwt</p>
+      <p className="text-sm text-slate-800">Rating:{leetcodeRating}</p>
     </div>
   </a>
 
@@ -132,6 +122,7 @@ const Skills = ()=>{
     <div>
       <p className="font-semibold">Codeforces</p>
       <p className="text-sm text-slate-500">utkarshrawat</p>
+       <p className="text-sm text-slate-800">Rating:{codeforcesRating}</p>
     </div>
   </a>
 
@@ -145,19 +136,25 @@ const Skills = ()=>{
     <div>
       <p className="font-semibold">CodeChef</p>
       <p className="text-sm text-slate-500">utkarshrawat</p>
+      <p className="text-sm text-slate-800">Rating:{codechefRating}</p>
+
     </div>
   </a>
 
 </div>
                
             </div>
+
+            
+            
           </div>
         </div>
+       
       </section>
 
 
 
-      <section className="border-t border-slate-200 bg-white box-border flex "> 
+      <section className="webdev border-t border-slate-200 bg-white box-border flex "> 
         <div className="mx-auto max-w-7.2xl ml-60 mr-4 px-4 py-14 flex-col ">
             
           <div className="">
@@ -249,8 +246,8 @@ const Skills = ()=>{
       </section>
 
      
-      <section className="border-t border-b border-slate-200 bg-slate-50/50">
-        <div className="mx-auto flex w-full max-w-6xl ml-60 flex-col gap-8 px-4 py-14 sm:px-6 lg:flex-row lg:px-8">
+      <section className="sysdesign border-t border-b border-slate-200 bg-slate-50/50">
+        <div className="mx-auto flex max-w-6xl ml-60 flex-col gap-8 px-4 py-14 sm:px-6 lg:flex-row lg:px-8">
           <div >
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
               AIML
