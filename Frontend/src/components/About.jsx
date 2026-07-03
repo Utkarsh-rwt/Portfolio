@@ -1,12 +1,9 @@
 
 import { AsciiArt } from "./ui/ascii-art"
 import asciipic from "../assets/asciipic.png"
-import ContactMe from "./ContactMe"
 
 const About = () => {
 	return (
-
-		<div>
 		
 
 		<section className="w-full top-30  h-full flex items-center rounded-3xl border border-white bg-[#ffffff] p-8 shadow-xl shadow-stone-200/70 sm:p-10 lg:p-12  relative ">
@@ -64,7 +61,9 @@ const About = () => {
 						</a>
 					</div>
                         
-                   
+                    
+
+				
 				</div>
                 
 				
@@ -72,13 +71,7 @@ const About = () => {
 						
 				
 			</div>
-			
 		</section>
-
-
-		 <ContactMe></ContactMe>
-				
-	     </div>
 	)
 }
 
