@@ -3,8 +3,10 @@ import React, { useState } from "react";
 
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
-import gitviewsmap from "../assets/gitviewsmap.png"
 import { Link } from "react-router-dom";
+
+import gitviewsmap from "../assets/gitviewsmap.png"
+
 export default  function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
@@ -51,6 +53,7 @@ function Navbar({
             
           </div>
         </MenuItem>
+
 
         <MenuItem setActive={setActive} active={active} item="Blogs">
          <p>Featured</p>
