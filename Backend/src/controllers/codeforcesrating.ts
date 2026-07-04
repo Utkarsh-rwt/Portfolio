@@ -1,13 +1,15 @@
-export default async function getCodeforcesRating(username: string) {
-  const response = await fetch(
-    `https://codeforces.com/api/user.info?handles=${username}`
-  );
+async function getCodeforcesRating(username: string) {
+  const url = `https://codeforces.com/api/user.info?handles=${username}`;
+
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch Codeforces data");
+  }
 
   const data = await response.json();
 
-  if (data.status !== "OK") {
-    throw new Error("User not found");
-  }
-
   return data.result[0].rating;
 }
+
+export default getCodeforcesRating;

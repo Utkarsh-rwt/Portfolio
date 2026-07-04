@@ -1,9 +1,13 @@
+import Project1 from "@/components/ProjectsPageContent/Project1";
 import React from 'react'
 
-const projects = () => {
+const Projects = () => {
   return (
-    <div>projects</div>
+    <div className="mx-auto mt-26 grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
+  <Project1/>
+  
+</div>
   )
 }
 
-export default projects
+export default Projects

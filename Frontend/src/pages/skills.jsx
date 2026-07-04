@@ -39,14 +39,23 @@ import {
 
 
 
- 
+
+
+ const Skill = ({ icon, name }) => (
+  <div className="flex flex-col items-center gap-2 transition-transform duration-300 hover:-translate-y-2 hover:scale-110">
+    {icon}
+    <span className="text-sm font-medium text-zinc-400">{name}</span>
+  </div>
+);
+
 
 
 
 
 const Skills = ()=>{
-
  
+  const PORT= import.meta.env.VITE_BACKEND_PORT;
+  
 
 const [leetcodeRating, setLeetcodeRating] = useState(" fetching...")
 const [codeforcesRating, setCodeforcesRating] = useState(" fetching...")
@@ -55,13 +64,15 @@ const [codechefRating, setCodechefRating] = useState(" fetching...")
 
 useEffect(() => {
   async function fetchRatings() {
+
+      console.log(PORT);
     try {
       const [lc, cf, cc] = await Promise.all([
-        fetch("http://localhost:5000/leetcode/rating/utkarsh-rwt"),
-        fetch("http://localhost:5000/codeforces/rating/utkarshrawat"),
-        fetch("http://localhost:5000/codechef/rating/utkarshrawat"),
+        fetch(`http://localhost:${PORT}/leetcode/rating/utkarsh-rwt`),
+        fetch(`http://localhost:${PORT}/codeforces/rating/utkarshrawat`),
+        fetch(`http://localhost:${PORT}/codechef/rating/utkarshrawat`),
       ]);
-
+     
       const leetcode = await lc.json();
       const codeforces = await cf.json();
       const codechef = await cc.json();
@@ -72,12 +83,17 @@ useEffect(() => {
     } catch (err) {
       console.error(err);
     }
+    
+
   }
 
   fetchRatings();
-});
+},[]);
+
 
  return (
+
+
     <div className="mt-25">
     
 
@@ -90,13 +106,13 @@ useEffect(() => {
             <h2 className="mt-3 text-3xl font-semibold">Data Structures & Algorithms</h2>
           </div>
 
-          <div className="">
+          <div >
             <p className="text-base leading-7 text-slate-600">
               Strengthening problem-solving skills through competitive programming and algorithmic thinking.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-                <div className="mt-8 flex flex-wrap gap-8">
+                <div className="mt-4 flex flex-wrap gap-8">
 
   <a
     href="https://leetcode.com/u/utkarsh-rwt/"
@@ -153,7 +169,6 @@ useEffect(() => {
       </section>
 
 
-
       <section className="webdev border-t border-slate-200 bg-white box-border flex "> 
         <div className="mx-auto max-w-7.2xl ml-60 mr-4 px-4 py-14 flex-col ">
             
@@ -170,54 +185,61 @@ useEffect(() => {
             </p>    
           </div>
 
-           <div className="mt-4 flex flex-col gap-3">
-
-                <div className="flex gap-6">
-  <SiHtml5 className="text-5xl  text-[#E34F26]" />
-  <SiCss className="text-5xl text-[#1572B6]" />
-  <SiJavascript className="text-5xl text-[#F7DF1E]" />
-  <SiTypescript className="text-5xl text-[#3178C6]" />
-  <SiPython className="text-5xl text-[#3776AB]" />
-         </div>
-
-         <div className="flex flex-wrap gap-6 text-5xl">
-    <SiReact className="text-[#61DAFB]" />
-    <SiTailwindcss className="text-[#06B6D4]" />
-    <SiVite className="text-[#646CFF]" />
-    <SiRedux className="text-[#764ABC]" />
-    
-       </div>
-
-       
-  <div className="flex flex-wrap   gap-6 text-5xl">
-    <SiNodedotjs className="text-[#339933]" />
-    <SiExpress />
-    <SiFastapi className="text-[#009688]" />
-    <SiFlask />
-    
-  </div>
-
-  <div className="flex flex-wrap  gap-6 text-5xl">
-  <SiDocker className="text-[#2496ED]" />
-  <SiGithubactions className="text-[#2088FF]" />
-  <SiGit className="text-[#F05032]" />
-  <SiGithub />
-  <SiLinux className="text-[#FCC624]" />
-  <SiNginx className="text-[#009639]" />
-  <SiPostman className="text-[#FF6C37]" />
-  <SiVercel />
-  <SiRender className="text-[#46E3B7]" />
+           <div className="flex flex-wrap mt-5 gap-8">
+  <Skill
+    icon={<SiHtml5 className="text-5xl text-[#E34F26]" />}
+    name="HTML5"
+  />
+  <Skill
+    icon={<SiCss className="text-5xl text-[#1572B6]" />}
+    name="CSS3"
+  />
+  <Skill
+    icon={<SiJavascript className="text-5xl text-[#F7DF1E]" />}
+    name="JavaScript"
+  />
+  <Skill
+    icon={<SiTypescript className="text-5xl text-[#3178C6]" />}
+    name="TypeScript"
+  />
+  <Skill
+    icon={<SiPython className="text-5xl text-[#3776AB]" />}
+    name="Python"
+  />
 </div>
 
- <div className="flex flex-wrap  gap-6 text-5xl">
-    <SiMongodb className="text-[#47A248]" />
-  <SiPostgresql className="text-[#336791]" />
-  <SiMysql className="text-[#4479A1]" />
-  <SiRedis className="text-[#DC382D]" />
- </div>
+<div className="flex flex-wrap gap-8 mt-4">
+  <Skill icon={<SiReact className="text-5xl text-[#61DAFB]" />} name="React" />
+  <Skill icon={<SiTailwindcss className="text-5xl text-[#06B6D4]" />} name="Tailwind CSS" />
+  <Skill icon={<SiVite className="text-5xl text-[#646CFF]" />} name="Vite" />
+  <Skill icon={<SiRedux className="text-5xl text-[#764ABC]" />} name="Redux" />
+</div>
 
-         
-            </div>
+<div className="flex flex-wrap gap-8 mt-4">
+  <Skill icon={<SiNodedotjs className="text-5xl text-[#339933]" />} name="Node.js" />
+  <Skill icon={<SiExpress className="text-5xl" />} name="Express.js" />
+  <Skill icon={<SiFastapi className="text-5xl text-[#009688]" />} name="FastAPI" />
+  <Skill icon={<SiFlask className="text-5xl" />} name="Flask" />
+</div>
+
+<div className="flex flex-wrap gap-8 mt-4">
+  <Skill icon={<SiDocker className="text-5xl text-[#2496ED]" />} name="Docker" />
+  <Skill icon={<SiGithubactions className="text-5xl text-[#2088FF]" />} name="GitHub Actions" />
+  <Skill icon={<SiGit className="text-5xl text-[#F05032]" />} name="Git" />
+  <Skill icon={<SiGithub className="text-5xl" />} name="GitHub" />
+  <Skill icon={<SiLinux className="text-5xl text-[#FCC624]" />} name="Linux" />
+  <Skill icon={<SiNginx className="text-5xl text-[#009639]" />} name="Nginx" />
+  <Skill icon={<SiPostman className="text-5xl text-[#FF6C37]" />} name="Postman" />
+  <Skill icon={<SiVercel className="text-5xl" />} name="Vercel" />
+  <Skill icon={<SiRender className="text-5xl text-[#46E3B7]" />} name="Render" />
+</div>
+
+<div className="flex flex-wrap gap-8 mt-4">
+  <Skill icon={<SiMongodb className="text-5xl text-[#47A248]" />} name="MongoDB" />
+  <Skill icon={<SiPostgresql className="text-5xl text-[#336791]" />} name="PostgreSQL" />
+  <Skill icon={<SiMysql className="text-5xl text-[#4479A1]" />} name="MySQL" />
+  <Skill icon={<SiRedis className="text-5xl text-[#DC382D]" />} name="Redis" />
+</div>
        
         </div>
       </section>
@@ -255,7 +277,7 @@ useEffect(() => {
             <h2 className="mt-3 text-3xl font-semibold">Artificial Intelligence & Machine Learning</h2>
           </div>
 
-          <div className>
+          <div >
             <p className="text-base leading-7 text-slate-600">
               Exploring machine learning concepts, model development, data analysis, and AI-powered applications.
             </p>
