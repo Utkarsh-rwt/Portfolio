@@ -24,7 +24,7 @@ const About = () => {
 				<div>
 					
 					<h1 className="max-w-3xl text-4xl font-bold tracking-tight text-black sm:text-6xl lg:text-7xl">
-						Hi, I'm Utkarsh Rawat Software Engineer focused on backend engineering...</h1>
+						Hi, I'm Utkarsh Rawat CSE student at IIIT Una focused on backend engineering...</h1>
 					<p className="mt-6 max-w-2xl text-base leading-8 text-stone-700 sm:text-lg">
 						I like turning ideas into working software. Whether it's designing a backend, connecting databases, 
 						or building a clean frontend, I enjoy figuring out how all the pieces fit together.

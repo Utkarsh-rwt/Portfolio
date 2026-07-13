@@ -1,11 +1,13 @@
 import Project1 from "@/components/ProjectsPageContent/Project1";
+import Project2 from "@/components/ProjectsPageContent/Project2";
 import React from 'react'
 
 const Projects = () => {
   return (
-    <div className="mx-auto mt-26 grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
+    <div className="mt-30  mr-40 ml-40 flex  flex-col gap-30 " >
   <Project1/>
-  
+  <Project2/>
+
 </div>
   )
 }
