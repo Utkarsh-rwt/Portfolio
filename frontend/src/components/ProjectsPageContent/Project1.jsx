@@ -24,16 +24,7 @@ const Project1 = () => {
     </p>
   </div>
 
-  {/* Learning Line */}
-  <div className="flex items-center px-5 py-3">
-    <div className="h-[2px] flex-1 bg-black"></div>
-
-    <span className="px-4 text-xs font-semibold tracking-[0.35em] uppercase">
-      Learning
-    </span>
-
-    <div className="h-[2px] flex-1 bg-black"></div>
-  </div>
+  
 
   {/* Content */}
   <div className="space-y-5 px-5 py-5">
@@ -42,6 +33,7 @@ const Project1 = () => {
       GitHub analytics platform that visualizes visitor
       locations and generates dynamic SVG profile badges.
     </p>
+    
 
     <div>
       <p className="mb-2 font-semibold">
@@ -70,7 +62,7 @@ const Project1 = () => {
 
     <div>
       <p className="mb-2 font-semibold">
-        Learned
+        Learnings 
       </p>
 
     <ul className="space-y-1 text-sm text-zinc-600">

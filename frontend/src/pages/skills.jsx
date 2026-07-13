@@ -98,7 +98,7 @@ useEffect(() => {
     
 
          <section className="dsa border-t border-slate-200 bg-white  flex  ">
-        <div className="mx-auto max-w-7.2xl ml-60 mr-4 px-4 py-14 flex-col   ">
+        <div className="mx-auto max-w-7.2xl ml-60  px-4 py-14 ">
             <div className="">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
               DSA
@@ -170,7 +170,7 @@ useEffect(() => {
 
 
       <section className="webdev border-t border-slate-200 bg-white box-border flex "> 
-        <div className="mx-auto max-w-7.2xl ml-60 mr-4 px-4 py-14 flex-col ">
+        <div className="mx-auto max-w-7.2xl ml-60  px-4 py-14 flex-col ">
             
           <div className="">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
@@ -245,7 +245,7 @@ useEffect(() => {
       </section>
 
       <section className="border-t border-slate-200 bg-slate-50/50 flex ">
-        <div className="mx-auto flex max-w-6xl flex-col ml-60 gap-8 px-4 py-14 sm:px-6 lg:flex-row lg:px-8">
+        <div className="mx-auto  max-w-7.2xl ml-60  px-4 py-14 ">
           <div >
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
               System Design
@@ -269,7 +269,7 @@ useEffect(() => {
 
      
       <section className="sysdesign border-t border-b border-slate-200 bg-slate-50/50">
-        <div className="mx-auto flex max-w-6xl ml-60 flex-col gap-8 px-4 py-14 sm:px-6 lg:flex-row lg:px-8">
+        <div className="mx-auto  max-w-7.2xl ml-60 px-4 py-14 ">
           <div >
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
               AIML

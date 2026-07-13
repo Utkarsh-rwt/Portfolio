@@ -1,5 +1,5 @@
 
-import { AsciiArt } from "./../ui/ascii-art"
+import { AsciiArt } from "../ui/ascii-art"
 import asciipic from "../../assets/asciipic.png"
 import ContactMe from "./ContactMe"
 
@@ -15,8 +15,8 @@ const About = () => {
       src={asciipic}
       resolution={100}
       charset="blocks"
-      color="#0"
-	  inverted
+      color="#fffff"
+	  inverted		
       animated={false}
       className="mx-auto aspect-square w-full max-w-lg bg-neutral-950"  />
 
@@ -49,7 +49,7 @@ const About = () => {
 							LinkedIn
 						</a>
 						<a
-							href="https://x.com/your-handle"
+							href="https://x.com/debugomega"
 							target="_blank"
 							rel="noreferrer"
 							className="rounded-full border border-stone-300 bg-white px-5 py-3 text-sm font-semibold text-black transition hover:border-stone-400 hover:bg-stone-50"
