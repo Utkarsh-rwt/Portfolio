@@ -67,11 +67,12 @@ useEffect(() => {
 
       console.log(PORT);
     try {
-      const [lc, cf, cc] = await Promise.all([
-        fetch(`http://localhost:${PORT}/leetcode/rating/utkarsh-rwt`),
-        fetch(`http://localhost:${PORT}/codeforces/rating/utkarshrawat`),
-        fetch(`http://localhost:${PORT}/codechef/rating/utkarshrawat`),
-      ]);
+     const [lc, cf, cc] = await Promise.all([
+  fetch("/leetcode/rating/utkarsh-rwt"),
+  fetch("/codeforces/rating/utkarshrawat"),
+  fetch("/codechef/rating/utkarshrawat"),
+         ]);
+     
      
       const leetcode = await lc.json();
       const codeforces = await cf.json();
