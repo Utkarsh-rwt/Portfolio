@@ -97,7 +97,7 @@ useEffect(() => {
     <div className="mt-25">
     
 
-         <section className="dsa border-t border-slate-200 bg-white  flex  ">
+         <section className="border-t border-slate-200 bg-white  flex  " id="dsa">
         <div className="mx-auto max-w-7.2xl ml-60  px-4 py-14 ">
             <div className="">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
@@ -169,7 +169,7 @@ useEffect(() => {
       </section>
 
 
-      <section className="webdev border-t border-slate-200 bg-white box-border flex "> 
+      <section className=" border-t border-slate-200 bg-white box-border flex"  id="webdev" > 
         <div className="mx-auto max-w-7.2xl ml-60  px-4 py-14 flex-col ">
             
           <div className="">
@@ -181,7 +181,7 @@ useEffect(() => {
 
           <div className="">
             <p className="text-base leading-7 text-slate-600">
-              Building responsive, modern, and scalable web applications using React, Tailwind CSS, Node.js, Express.js, and MongoDB.
+              Building modern, and scalable web applications using React, Tailwind CSS, Node.js, Express.js, and MongoDB.
             </p>    
           </div>
 
@@ -202,10 +202,11 @@ useEffect(() => {
     icon={<SiTypescript className="text-5xl text-[#3178C6]" />}
     name="TypeScript"
   />
-  <Skill
+  {/* <Skill
     icon={<SiPython className="text-5xl text-[#3776AB]" />}
     name="Python"
-  />
+  /> */}
+
 </div>
 
 <div className="flex flex-wrap gap-8 mt-4">
@@ -218,17 +219,17 @@ useEffect(() => {
 <div className="flex flex-wrap gap-8 mt-4">
   <Skill icon={<SiNodedotjs className="text-5xl text-[#339933]" />} name="Node.js" />
   <Skill icon={<SiExpress className="text-5xl" />} name="Express.js" />
-  <Skill icon={<SiFastapi className="text-5xl text-[#009688]" />} name="FastAPI" />
-  <Skill icon={<SiFlask className="text-5xl" />} name="Flask" />
+  {/* <Skill icon={<SiFastapi className="text-5xl text-[#009688]" />} name="FastAPI" /> */}
+  {/* <Skill icon={<SiFlask className="text-5xl" />} name="Flask" /> */}
 </div>
 
 <div className="flex flex-wrap gap-8 mt-4">
-  <Skill icon={<SiDocker className="text-5xl text-[#2496ED]" />} name="Docker" />
+  {/* <Skill icon={<SiDocker className="text-5xl text-[#2496ED]" />} name="Docker" /> */}
   <Skill icon={<SiGithubactions className="text-5xl text-[#2088FF]" />} name="GitHub Actions" />
   <Skill icon={<SiGit className="text-5xl text-[#F05032]" />} name="Git" />
   <Skill icon={<SiGithub className="text-5xl" />} name="GitHub" />
   <Skill icon={<SiLinux className="text-5xl text-[#FCC624]" />} name="Linux" />
-  <Skill icon={<SiNginx className="text-5xl text-[#009639]" />} name="Nginx" />
+  {/* <Skill icon={<SiNginx className="text-5xl text-[#009639]" />} name="Nginx" /> */}
   <Skill icon={<SiPostman className="text-5xl text-[#FF6C37]" />} name="Postman" />
   <Skill icon={<SiVercel className="text-5xl" />} name="Vercel" />
   <Skill icon={<SiRender className="text-5xl text-[#46E3B7]" />} name="Render" />
@@ -236,15 +237,15 @@ useEffect(() => {
 
 <div className="flex flex-wrap gap-8 mt-4">
   <Skill icon={<SiMongodb className="text-5xl text-[#47A248]" />} name="MongoDB" />
-  <Skill icon={<SiPostgresql className="text-5xl text-[#336791]" />} name="PostgreSQL" />
-  <Skill icon={<SiMysql className="text-5xl text-[#4479A1]" />} name="MySQL" />
-  <Skill icon={<SiRedis className="text-5xl text-[#DC382D]" />} name="Redis" />
+  {/* <Skill icon={<SiPostgresql className="text-5xl text-[#336791]" />} name="PostgreSQL" /> */}
+  {/* <Skill icon={<SiMysql className="text-5xl text-[#4479A1]" />} name="MySQL" /> */}
+  {/* <Skill icon={<SiRedis className="text-5xl text-[#DC382D]" />} name="Redis" /> */}
 </div>
        
         </div>
       </section>
 
-      <section className="border-t border-slate-200 bg-slate-50/50 flex ">
+      <section className=" border-t border-slate-200 bg-slate-50/50 flex " id="ai-ml">
         <div className="mx-auto  max-w-7.2xl ml-60  px-4 py-14 ">
           <div >
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
@@ -268,7 +269,7 @@ useEffect(() => {
       </section>
 
      
-      <section className="sysdesign border-t border-b border-slate-200 bg-slate-50/50">
+      <section className="border-t border-b border-slate-200 bg-slate-50/50" id="sysdesign">
         <div className="mx-auto  max-w-7.2xl ml-60 px-4 py-14 ">
           <div >
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">

@@ -56,12 +56,12 @@ function Navbar({
 
 
         <MenuItem setActive={setActive} active={active} item="Blogs">
-         <p>Featured</p>
+         <p>still figuring out !!</p>
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/hobby"></HoveredLink>
             <HoveredLink href="/individual"></HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+            {/* <HoveredLink href="/team">Team</HoveredLink>
+            <HoveredLink href="/enterprise">Enterprise</HoveredLink> */}
           </div>
         </MenuItem>
       </Menu>
