@@ -4,7 +4,7 @@ import React from 'react'
 
 const Projects = () => {
   return (
-    <div className="mt-30  mr-40 ml-40 flex  flex-col gap-30 " >
+    <div className="mt-10 flex flex-col gap-10 px-4 sm:px-6 lg:mt-30 lg:gap-30 lg:px-0 lg:mr-40 lg:ml-40" >
   <Project1/>
   <Project2/>
 

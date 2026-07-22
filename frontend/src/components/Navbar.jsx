@@ -9,7 +9,7 @@ import gitviewsmap from "../assets/gitviewsmap.png"
 
 export default  function NavbarDemo() {
   return (
-    <div className="relative w-full flex items-center justify-center">
+    <div className="relative z-50 flex w-full items-center justify-center px-2 sm:px-4">
       <Navbar className="top-2" />
     </div>
   );
@@ -21,7 +21,7 @@ function Navbar({
   const [active, setActive] = useState(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
+      className={cn("fixed top-4 inset-x-2 z-50 mx-auto max-w-2xl sm:top-6 sm:inset-x-4 lg:top-10 lg:inset-x-0", className)}>
       <Menu setActive={setActive}>
        
           <Link to="/" className="text-medium">About</Link>

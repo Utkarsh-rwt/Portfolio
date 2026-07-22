@@ -21,6 +21,7 @@ body {
   background: #ffffff;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 
 }
 
@@ -30,6 +31,7 @@ a {
 
 #root {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 button,

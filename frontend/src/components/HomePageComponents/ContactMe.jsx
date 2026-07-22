@@ -14,10 +14,10 @@ const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
   )}`;
 
   return (
-    <section className=" mt-40 rounded-3xl border border-stone-200 bg-white px-6 py-10 shadow-xl shadow-stone-200/60 sm:px-8 lg:px-10">
+    <section className="relative mt-20 rounded-3xl border border-stone-200 bg-white px-4 py-10 shadow-xl shadow-stone-200/60 sm:mt-28 sm:px-8 lg:mt-40 lg:px-10">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(0,0,0,0.08),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(22,163,74,0.12),transparent_28%)]" />
 
-      <div className="mx-auto max-w-4xl ml-45">
+      <div className="mx-auto w-full max-w-4xl px-0 sm:px-2 lg:ml-45 lg:px-0">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-stone-500">
           Contact me
         </p>

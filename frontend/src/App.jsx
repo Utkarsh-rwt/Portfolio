@@ -9,10 +9,10 @@ import Blogs from './pages/blogs.jsx'
 
 const App = () => {
   return (
-    <div className="app-shell">
+    <div className="app-shell min-h-screen w-full overflow-x-hidden">
       <Navbar />
 
-      <main className="page-content">
+      <main className="page-content w-full pt-16 sm:pt-20 lg:pt-24">
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/projects" element={<Projects />} />
