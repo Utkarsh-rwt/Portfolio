@@ -3,7 +3,7 @@ import portfolio from "../../assets/portfolio.png";
 
 const Project2 = () => {
   return (
-    <div className="flex flex-col md:flex-row bg-white overflow-hidden">
+    <div className="flex flex-col md:flex-row bg-white overflow-hidden" id="portfolio">
 
       {/* Left Image */}
       <div className="md:w-2/5">

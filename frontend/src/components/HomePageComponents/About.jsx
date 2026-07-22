@@ -9,7 +9,7 @@ const About = () => {
 		<div>
 		
 
-		<section className="relative mx-auto mt-4 grid w-full grid-cols-1 items-start gap-6 rounded-3xl border border-white bg-[#ffffff] p-3 shadow-xl shadow-stone-200/70 sm:mt-10 sm:gap-8 sm:p-8 lg:mt-15 lg:grid-cols-[minmax(420px,520px)_1fr] lg:items-center lg:gap-10 lg:p-12 ">
+		<section className="relative mx-auto mt-4 grid w-full max-w-screen-2xl grid-cols-1 items-start gap-6 rounded-3xl border border-white bg-[#ffffff] px-4 py-3 sm:mt-10 sm:gap-8 sm:px-8 sm:py-8 lg:mt-15 lg:grid-cols-[minmax(480px,560px)_minmax(0,1fr)] lg:items-center lg:gap-14 lg:px-16 lg:py-12 xl:gap-20 xl:px-20 ">
            
 			<AsciiArt
       src={asciipic}
@@ -18,9 +18,9 @@ const About = () => {
       color="#fffff"
 	  inverted		
       animated={false}
-			className="mx-auto aspect-square w-full max-w-xs bg-neutral-950 sm:max-w-md lg:mx-auto lg:max-w-130"  />
+			className="mx-auto aspect-square w-full max-w-xs bg-neutral-950 sm:max-w-md lg:mx-auto lg:w-full lg:max-w-140"  />
 
-			<div className="flex flex-col gap-8 text-center lg:mt-0 lg:pr-2 lg:text-left ">
+			<div className="flex flex-col gap-8 text-center lg:mt-0 lg:pl-2 lg:text-left ">
 				<div className="mx-auto max-w-2xl lg:mx-0">
 					
 					<h1 className="mx-auto max-w-3xl text-3xl font-bold tracking-tight text-black sm:text-5xl lg:text-7xl">

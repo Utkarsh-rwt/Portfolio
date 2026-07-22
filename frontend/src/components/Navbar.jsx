@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 import gitviewsmap from "../assets/gitviewsmap.png"
+import portfolio from "../assets/portfolio.png"
 
 export default  function NavbarDemo() {
   return (
@@ -42,13 +43,13 @@ function Navbar({
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Git Views Map"
-              href="/project#gitviewsmap"
+              href="/projects#gitviewsmap"
               src={gitviewsmap}
               description="Maps github visitors on a map made by using simple CRUD operations" />
             <ProductItem
               title="Portfolio"
-              href="https://tailwindmasterkit.com"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+              href="/projects#portfolio"
+              src={portfolio}
               description="Production ready Tailwind css components for your next project" />
             
           </div>
