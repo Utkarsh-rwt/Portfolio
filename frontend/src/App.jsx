@@ -5,7 +5,7 @@ import About from './components/HomePageComponents/About.jsx'
 
 import Projects from './pages/projects.jsx'
 import Skills from './pages/skills.jsx'
-import Blogs from './pages/blogs.jsx'
+import Blogs, { BlogPost } from './pages/blogs.jsx'
 
 const App = () => {
   return (
@@ -18,6 +18,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/spring-boot-jsp-intellij" element={<BlogPost />} />
         </Routes>
       </main>
     </div>
