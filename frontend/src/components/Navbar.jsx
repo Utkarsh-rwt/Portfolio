@@ -57,13 +57,7 @@ function Navbar({
 
 
         <MenuItem setActive={setActive} active={active} item="Blogs" to="/blogs">
-         <p>Notes from building and debugging software</p>
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby"></HoveredLink>
-            <HoveredLink href="/individual"></HoveredLink>
-            {/* <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink> */}
-          </div>
+         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-stone-500">Engineering notes</p>
         </MenuItem>
       </Menu>
     </div>

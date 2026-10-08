@@ -4,7 +4,6 @@ import {
   SiHtml5,
   SiCss,
   SiJavascript,
-  SiTypescript,
   SiPython,
   SiReact,
   SiTailwindcss,
@@ -15,6 +14,7 @@ import {
   SiFlask,
   SiMongodb,
   SiPostgresql,
+  SiSpring,
   SiDocker,
   SiGithubactions,
   SiGit,
@@ -22,7 +22,6 @@ import {
   SiLinux,
   SiPostman,
   SiNginx,
-  SiRedux,
   SiVercel,
   SiMysql,
   SiRedis,
@@ -35,6 +34,9 @@ import {
   
  
 } from "react-icons/si";
+
+import { FaJava } from "react-icons/fa6";
+import { Cable, Database, Table2, Workflow } from "lucide-react";
 
 
 
@@ -200,8 +202,8 @@ useEffect(() => {
     name="JavaScript"
   />
   <Skill
-    icon={<SiTypescript className="text-5xl text-[#3178C6]" />}
-    name="TypeScript"
+    icon={<FaJava className="text-5xl text-[#E76F00]" />}
+    name="Java"
   />
   {/* <Skill
     icon={<SiPython className="text-5xl text-[#3776AB]" />}
@@ -214,12 +216,14 @@ useEffect(() => {
   <Skill icon={<SiReact className="text-5xl text-[#61DAFB]" />} name="React" />
   <Skill icon={<SiTailwindcss className="text-5xl text-[#06B6D4]" />} name="Tailwind CSS" />
   <Skill icon={<SiVite className="text-5xl text-[#646CFF]" />} name="Vite" />
-  <Skill icon={<SiRedux className="text-5xl text-[#764ABC]" />} name="Redux" />
 </div>
 
 <div className="flex flex-wrap gap-8 mt-4">
+  <Skill icon={<SiSpring className="text-5xl text-[#6DB33F]" />} name="Spring" />
   <Skill icon={<SiNodedotjs className="text-5xl text-[#339933]" />} name="Node.js" />
   <Skill icon={<SiExpress className="text-5xl" />} name="Express.js" />
+  <Skill icon={<Cable className="h-12 w-12 text-[#2563eb]" />} name="JDBC" />
+  <Skill icon={<Workflow className="h-12 w-12 text-[#16a34a]" />} name="Spring AOP" />
   {/* <Skill icon={<SiFastapi className="text-5xl text-[#009688]" />} name="FastAPI" /> */}
   {/* <Skill icon={<SiFlask className="text-5xl" />} name="Flask" /> */}
 </div>
@@ -238,7 +242,9 @@ useEffect(() => {
 
 <div className="flex flex-wrap gap-8 mt-4">
   <Skill icon={<SiMongodb className="text-5xl text-[#47A248]" />} name="MongoDB" />
-  {/* <Skill icon={<SiPostgresql className="text-5xl text-[#336791]" />} name="PostgreSQL" /> */}
+  <Skill icon={<SiPostgresql className="text-5xl text-[#336791]" />} name="PostgreSQL" />
+  <Skill icon={<Database className="h-12 w-12 text-[#336791]" />} name="SQL" />
+  <Skill icon={<Table2 className="h-12 w-12 text-[#6b7280]" />} name="H2" />
   {/* <Skill icon={<SiMysql className="text-5xl text-[#4479A1]" />} name="MySQL" /> */}
   {/* <Skill icon={<SiRedis className="text-5xl text-[#DC382D]" />} name="Redis" /> */}
 </div>
