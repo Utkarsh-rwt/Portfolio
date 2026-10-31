@@ -66,28 +66,34 @@ const [codechefRating, setCodechefRating] = useState(" fetching...")
 
 useEffect(() => {
   async function fetchRatings() {
+    const fetchRating = async (url) => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
 
-      console.log(PORT);
-    try {
-     const [lc, cf, cc] = await Promise.all([
-  fetch("/leetcode/rating/utkarsh-rwt"),
-  fetch("/codeforces/rating/utkarshrawat"),
-  fetch("/codechef/rating/utkarshrawat"),
-         ]);
-     
-     
-      const leetcode = await lc.json();
-      const codeforces = await cf.json();
-      const codechef = await cc.json();
+        const data = await response.json();
+        if (data.rating == null) {
+          throw new Error("Rating was not included in the response");
+        }
 
-      setLeetcodeRating(leetcode.rating);
-      setCodeforcesRating(codeforces.rating);
-      setCodechefRating(codechef.rating);
-    } catch (err) {
-      console.error(err);
-    }
-    
+        return data.rating;
+      } catch (err) {
+        console.error(`Unable to fetch rating from ${url}:`, err);
+        return "Unavailable";
+      }
+    };
 
+    const [leetcode, codeforces, codechef] = await Promise.all([
+      fetchRating("/leetcode/rating/utkarsh-rwt"),
+      fetchRating("/codeforces/rating/utkarshrawat"),
+      fetchRating("/codechef/rating/utkarshrawat"),
+    ]);
+
+    setLeetcodeRating(leetcode);
+    setCodeforcesRating(codeforces);
+    setCodechefRating(codechef);
   }
 
   fetchRatings();
