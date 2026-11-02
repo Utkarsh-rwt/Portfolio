@@ -10,13 +10,17 @@ const router =  Router();
 router.get('/leetcode/rating/:username',async (req,res)=>{
     const username : string = req.params.username;
 
-    const rating = await getLeetCodeRating(username);
-    
-    res.json({
-    "rating" : rating
-    });
+    try {
+        const rating = await getLeetCodeRating(username);
 
-    return;
+        res.json({
+            "rating" : rating
+        });
+    } catch (error) {
+        res.status(502).json({
+            "error": error instanceof Error ? error.message : "Unable to fetch LeetCode rating"
+        });
+    }
     });
 
 router.get('/codechef/rating/:username',async (req,res)=>{
