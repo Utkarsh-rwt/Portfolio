@@ -33,7 +33,7 @@ const getLeetCodeRating = async (username: string) => {
     throw new Error(`LeetCode user not found: ${username}`);
   }
 
-  return rating;
+  return Math.round(rating);
 };
 
 export default getLeetCodeRating;

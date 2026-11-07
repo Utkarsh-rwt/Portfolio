@@ -56,7 +56,7 @@ import { Cable, Database, Table2, Workflow } from "lucide-react";
 
 const Skills = ()=>{
  
-  const PORT= import.meta.env.VITE_BACKEND_PORT;
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || `http://localhost:${import.meta.env.VITE_BACKEND_PORT || 5000}`;
   
 
 const [leetcodeRating, setLeetcodeRating] = useState(" fetching...")
@@ -86,9 +86,9 @@ useEffect(() => {
     };
 
     const [leetcode, codeforces, codechef] = await Promise.all([
-      fetchRating("/leetcode/rating/utkarsh-rwt"),
-      fetchRating("/codeforces/rating/utkarshrawat"),
-      fetchRating("/codechef/rating/utkarshrawat"),
+      fetchRating(`${backendUrl}/leetcode/rating/utkarsh-rwt`),
+      fetchRating(`${backendUrl}/codeforces/rating/utkarshrawat`),
+      fetchRating(`${backendUrl}/codechef/rating/utkarshrawat`),
     ]);
 
     setLeetcodeRating(leetcode);
@@ -97,7 +97,7 @@ useEffect(() => {
   }
 
   fetchRatings();
-},[]);
+},[backendUrl]);
 
 
  return (

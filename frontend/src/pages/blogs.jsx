@@ -27,6 +27,23 @@ const Blogs = () => {
             When Spring Boot JSP works with Maven but not IntelliJ IDEA
           </h2>
         </Link>
+        <Link
+          className="block py-8 transition-colors hover:bg-stone-50 sm:px-4 sm:py-10"
+          to="/blogs/blog2"
+        >
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
+            <span>Blog 02</span>
+            <span className="text-stone-300">/</span>
+            <time dateTime="2026-10-20">October 20, 2026</time>
+            <span className="text-stone-300">/</span>
+            <span>Java Web</span>
+            <span className="text-stone-300">/</span>
+            <span>Servlets</span>
+          </div>
+          <h2 className="mt-4 max-w-3xl text-2xl font-bold tracking-tight text-stone-950 sm:text-4xl">
+            Before Spring Web: Understanding the Servlet Foundation
+          </h2>
+        </Link>
       </nav>
     </section>
   )

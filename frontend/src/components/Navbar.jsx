@@ -59,6 +59,10 @@ function Navbar({
         <MenuItem setActive={setActive} active={active} item="Blogs" to="/blogs">
          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-stone-500">Engineering notes</p>
         </MenuItem>
+
+        <MenuItem setActive={setActive} active={active} item="Open Source" to="/open-source">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-stone-500">Live GitHub contributions</p>
+        </MenuItem>
       </Menu>
     </div>
   );

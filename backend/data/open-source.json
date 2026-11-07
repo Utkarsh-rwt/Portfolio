@@ -1,0 +1,156 @@
+[
+  {
+    "id": "apache-maven-13402",
+    "link": "https://github.com/apache/maven/pull/13402",
+    "org": "apache",
+    "repo": "maven",
+    "number": 13402,
+    "date": "2026-10-11T07:51:33Z",
+    "status": "closed",
+    "title": "[3.10.x] Fix dependency POM property profile activation"
+  },
+  
+  {
+    "id": "jgrapht-jgrapht-1396",
+    "link": "https://github.com/jgrapht/jgrapht/pull/1396",
+    "org": "jgrapht",
+    "repo": "jgrapht",
+    "number": 1396,
+    "date": "2026-10-17T00:11:27Z",
+    "status": "merged",
+    "title": "Avoid edge-set access in vertex checks"
+  },
+  
+  {
+    "id": "graylog2-graylog2-server-27798",
+    "link": "https://github.com/Graylog2/graylog2-server/pull/27798",
+    "org": "Graylog2",
+    "repo": "graylog2-server",
+    "number": 27798,
+    "date": "2026-10-15T16:25:44Z",
+    "status": "merged",
+    "title": "Enable cross-region S3 access for GeoIP downloads"
+  },
+  {
+    "id": "pacocartones-free-llm-api-hub-393",
+    "link": "https://github.com/pacocartones/free-llm-api-hub/pull/393",
+    "org": "pacocartones",
+    "repo": "free-llm-api-hub",
+    "number": 393,
+    "date": "2026-10-15T22:20:05Z",
+    "status": "merged",
+    "title": "Feat/explorer provider count"
+  },
+  {
+    "id": "hiero-ledger-hiero-sdk-java-2995",
+    "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/2995",
+    "org": "hiero-ledger",
+    "repo": "hiero-sdk-java",
+    "number": 2995,
+    "date": "2026-10-13T14:37:10Z",
+    "status": "merged",
+    "title": "ci: add TCK compatibility job"
+  },
+  {
+    "id": "rmyndharis-openwa-1863",
+    "link": "https://github.com/rmyndharis/OpenWA/pull/1863",
+    "org": "rmyndharis",
+    "repo": "OpenWA",
+    "number": 1863,
+    "date": "2026-10-13T18:43:34Z",
+    "status": "merged",
+    "title": "updated the zod dependicy from 4.6.5 to 4.6.7"
+  },
+  {
+    "id": "apache-maven-13401",
+    "link": "https://github.com/apache/maven/pull/13401",
+    "org": "apache",
+    "repo": "maven",
+    "number": 13401,
+    "date": "2026-10-11T06:20:57Z",
+    "status": "closed",
+    "title": "Fix/13390 dependency profile property activation"
+  },
+  {
+    "id": "hiero-ledger-hiero-sdk-js-4504",
+    "link": "https://github.com/hiero-ledger/hiero-sdk-js/pull/4504",
+    "org": "hiero-ledger",
+    "repo": "hiero-sdk-js",
+    "number": 4504,
+    "date": "2026-10-12T16:29:39Z",
+    "status": "merged",
+    "title": "test: add unit tests for rlpNumber helpers"
+  },
+  {
+    "id": "lingdojo-kana-dojo-32176",
+    "link": "https://github.com/lingdojo/kana-dojo/pull/32176",
+    "org": "lingdojo",
+    "repo": "kana-dojo",
+    "number": 32176,
+    "date": "2026-10-11T18:52:22Z",
+    "status": "merged",
+    "title": "content: add new grammar point"
+  },
+  {
+    "id": "epmociiitu-web2-7",
+    "link": "https://github.com/EPMOCIIITU/WEB2/pull/7",
+    "org": "EPMOCIIITU",
+    "repo": "WEB2",
+    "number": 7,
+    "date": "2026-08-06T19:52:57Z",
+    "status": "merged",
+    "title": "replaced hardcoded event data with dynamic event fetching from MongoDB"
+  },
+  {
+    "id": "epmociiitu-web2-6",
+    "link": "https://github.com/EPMOCIIITU/WEB2/pull/6",
+    "org": "EPMOCIIITU",
+    "repo": "WEB2",
+    "number": 6,
+    "date": "2026-08-03T10:46:56Z",
+    "status": "merged",
+    "title": "feat(api/members): validate POST with Zod and sanitize avatar URLs"
+  },
+  {
+    "id": "epmociiitu-web2-3",
+    "link": "https://github.com/EPMOCIIITU/WEB2/pull/3",
+    "org": "EPMOCIIITU",
+    "repo": "WEB2",
+    "number": 3,
+    "date": "2026-07-28T15:21:24Z",
+    "status": "merged",
+    "title": "fix: resolve member not found on profile page"
+  },
+
+  {
+    "id": "suhani1234-5-tourease-516",
+    "link": "https://github.com/Suhani1234-5/TourEase/pull/516",
+    "org": "Suhani1234-5",
+    "repo": "TourEase",
+    "number": 516,
+    "date": "2026-06-02T19:19:30Z",
+    "status": "merged",
+    "title": "both frontend and backend fix"
+  },
+  {
+    "id": "shantanugupta43-suggestpilot-40",
+    "link": "https://github.com/Shantanugupta43/SuggestPilot/pull/40",
+    "org": "Shantanugupta43",
+    "repo": "SuggestPilot",
+    "number": 40,
+    "date": "2026-04-02T06:05:25Z",
+    "status": "open",
+    "title": "fix dark mode reset"
+  },
+  
+  {
+    "id": "shantanugupta43-suggestpilot-6",
+    "link": "https://github.com/Shantanugupta43/SuggestPilot/pull/6",
+    "org": "Shantanugupta43",
+    "repo": "SuggestPilot",
+    "number": 6,
+    "date": "2026-02-27T15:42:34Z",
+    "status": "merged",
+    "title": "added a sliding toggle for darkmode"
+  }
+]
