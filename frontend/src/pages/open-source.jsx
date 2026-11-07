@@ -79,7 +79,7 @@ const OpenSource = () => {
 
       {loading ? <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="py-16 text-sm uppercase tracking-[0.18em] text-stone-500">Loading archive...</motion.p> : (
         pullRequests.length > 0 ? (
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {pullRequests.map((pullRequest, index) => (
               <motion.a
                 key={pullRequest.id}
@@ -92,19 +92,19 @@ const OpenSource = () => {
                 whileHover={{ y: -7, scale: 1.015 }}
                 className="group border border-stone-200 bg-white p-6 shadow-sm transition-colors hover:border-lime-300 hover:shadow-xl"
               >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-center gap-3">
+                <div className="flex min-w-0 items-start justify-between gap-3">
+                  <div className="flex min-w-0 items-center gap-3">
                     <img
                       src={`https://github.com/${pullRequest.org}.png?size=80`}
                       alt={`${pullRequest.org} logo`}
                       className="h-11 w-11 rounded-xl border border-stone-200 bg-stone-50 object-cover transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
                     />
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.14em] text-stone-500">{pullRequest.org}</p>
+                    <div className="min-w-0">
+                      <p className="truncate text-xs font-bold uppercase tracking-[0.14em] text-stone-500">{pullRequest.org}</p>
                       <p className="mt-1 text-xs text-stone-400">#{pullRequest.number}</p>
                     </div>
                   </div>
-                  <span className={`min-w-24 border px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] ${pullRequest.status === 'open' ? 'animate-pulse ' : ''}${statusStyles[pullRequest.status] || statusStyles.unknown}`}>{pullRequest.status}</span>
+                  <span className={`min-w-24 shrink-0 border px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] ${pullRequest.status === 'open' ? 'animate-pulse ' : ''}${statusStyles[pullRequest.status] || statusStyles.unknown}`}>{pullRequest.status}</span>
                 </div>
                 <h3 className="mt-6 line-clamp-2 min-h-12 font-semibold leading-6 text-stone-900 group-hover:text-lime-700">{pullRequest.title || `${pullRequest.org}/${pullRequest.repo} #${pullRequest.number}`}</h3>
                 <p className="mt-4 truncate text-sm font-medium text-stone-500">{pullRequest.repo}</p>

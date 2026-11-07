@@ -1,14 +1,15 @@
 [
   {
-    "id": "apache-maven-13402",
-    "link": "https://github.com/apache/maven/pull/13402",
-    "org": "apache",
-    "repo": "maven",
-    "number": 13402,
-    "date": "2026-10-11T07:51:33Z",
-    "status": "closed",
-    "title": "[3.10.x] Fix dependency POM property profile activation"
+    "id": "graylog2-graylog2-server-27798",
+    "link": "https://github.com/Graylog2/graylog2-server/pull/27798",
+    "org": "Graylog2",
+    "repo": "graylog2-server",
+    "number": 27798,
+    "date": "2026-10-15T16:25:44Z",
+    "status": "merged",
+    "title": "Enable cross-region S3 access for GeoIP downloads"
   },
+  
   
   {
     "id": "jgrapht-jgrapht-1396",
@@ -21,16 +22,7 @@
     "title": "Avoid edge-set access in vertex checks"
   },
   
-  {
-    "id": "graylog2-graylog2-server-27798",
-    "link": "https://github.com/Graylog2/graylog2-server/pull/27798",
-    "org": "Graylog2",
-    "repo": "graylog2-server",
-    "number": 27798,
-    "date": "2026-10-15T16:25:44Z",
-    "status": "merged",
-    "title": "Enable cross-region S3 access for GeoIP downloads"
-  },
+  
   {
     "id": "pacocartones-free-llm-api-hub-393",
     "link": "https://github.com/pacocartones/free-llm-api-hub/pull/393",
@@ -60,6 +52,16 @@
     "date": "2026-10-13T18:43:34Z",
     "status": "merged",
     "title": "updated the zod dependicy from 4.6.5 to 4.6.7"
+  },
+  {
+    "id": "apache-maven-13402",
+    "link": "https://github.com/apache/maven/pull/13402",
+    "org": "apache",
+    "repo": "maven",
+    "number": 13402,
+    "date": "2026-10-11T07:51:33Z",
+    "status": "closed",
+    "title": "[3.10.x] Fix dependency POM property profile activation"
   },
   {
     "id": "apache-maven-13401",

@@ -44,15 +44,48 @@ import { Cable, Database, Table2, Workflow } from "lucide-react";
 
 
  const Skill = ({ icon, name }) => (
-  <div className="flex flex-col items-center gap-2 transition-transform duration-300 hover:-translate-y-2 hover:scale-110">
-    {icon}
+  <div className="group flex min-w-24 flex-col items-center gap-2 rounded-2xl border border-white/80 bg-white/65 px-4 py-3 shadow-[0_8px_22px_rgba(28,25,23,0.1),0_1px_3px_rgba(255,255,255,0.9)_inset] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-white hover:bg-white/80 hover:shadow-[0_14px_30px_rgba(28,25,23,0.15),0_1px_4px_rgba(255,255,255,0.95)_inset]">
+    <span className="transition-transform duration-300 group-hover:scale-110">
+      {icon}
+    </span>
     <span className="text-sm font-medium text-zinc-400">{name}</span>
   </div>
 );
 
+const RatingChart = ({ title, points, color }) => {
+  const visiblePoints = points.slice(-24);
+  if (visiblePoints.length < 2) return null;
 
+  const ratings = visiblePoints.map((point) => point.rating);
+  const minimum = Math.min(...ratings);
+  const maximum = Math.max(...ratings);
+  const range = Math.max(maximum - minimum, 1);
+  const coordinates = visiblePoints.map((point, index) => ({
+    x: (index / (visiblePoints.length - 1)) * 300,
+    y: 92 - ((point.rating - minimum) / range) * 72,
+  }));
+  const line = coordinates.map(({ x, y }) => `${x},${y}`).join(" ");
 
-
+  return (
+    <div className="w-full max-w-xs rounded-2xl border border-white/80 bg-white/65 p-4 shadow-[0_8px_22px_rgba(28,25,23,0.1),0_1px_3px_rgba(255,255,255,0.9)_inset] backdrop-blur-xl">
+      <div className="flex items-center justify-between gap-3">
+        <p className="text-sm font-semibold text-slate-800">{title} history</p>
+        <span className="text-xs text-slate-500">{visiblePoints.length} contests</span>
+      </div>
+      <svg viewBox="0 0 300 110" className="mt-3 h-28 w-full overflow-visible" role="img" aria-label={`${title} rating history`}>
+        <line x1="0" y1="92" x2="300" y2="92" stroke="#cbd5e1" strokeWidth="1" />
+        <polyline points={line} fill="none" stroke={color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        {coordinates.map(({ x, y }, index) => (
+          <circle key={`${visiblePoints[index].label}-${index}`} cx={x} cy={y} r="4" fill={color} />
+        ))}
+      </svg>
+      <div className="flex justify-between text-[11px] text-slate-400">
+        <span>{visiblePoints[0].label}</span>
+        <span>{visiblePoints[visiblePoints.length - 1].label}</span>
+      </div>
+    </div>
+  );
+};
 
 const Skills = ()=>{
  
@@ -62,6 +95,8 @@ const Skills = ()=>{
 const [leetcodeRating, setLeetcodeRating] = useState(" fetching...")
 const [codeforcesRating, setCodeforcesRating] = useState(" fetching...")
 const [codechefRating, setCodechefRating] = useState(" fetching...")
+const [codeforcesHistory, setCodeforcesHistory] = useState([])
+const [codechefHistory, setCodechefHistory] = useState([])
 
 
 useEffect(() => {
@@ -85,15 +120,32 @@ useEffect(() => {
       }
     };
 
-    const [leetcode, codeforces, codechef] = await Promise.all([
+    const [leetcode, codeforces, codechef, codeforcesHistoryData, codechefHistoryData] = await Promise.all([
       fetchRating(`${backendUrl}/leetcode/rating/utkarsh-rwt`),
       fetchRating(`${backendUrl}/codeforces/rating/utkarshrawat`),
       fetchRating(`${backendUrl}/codechef/rating/utkarshrawat`),
+      fetchRatingHistory(`${backendUrl}/codeforces/rating-history/utkarshrawat`),
+      fetchRatingHistory(`${backendUrl}/codechef/rating-history/utkarshrawat`),
     ]);
 
     setLeetcodeRating(leetcode);
     setCodeforcesRating(codeforces);
     setCodechefRating(codechef);
+    setCodeforcesHistory(codeforcesHistoryData);
+    setCodechefHistory(codechefHistoryData);
+  }
+
+  async function fetchRatingHistory(url) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
+      const data = await response.json();
+      if (!Array.isArray(data)) throw new Error("Rating history was not included in the response");
+      return data;
+    } catch (err) {
+      console.error(`Unable to fetch rating history from ${url}:`, err);
+      return [];
+    }
   }
 
   fetchRatings();
@@ -120,16 +172,16 @@ useEffect(() => {
               Strengthening problem-solving skills through competitive programming and algorithmic thinking.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6">
                 <div className="mt-4 flex flex-wrap gap-8">
 
   <a
     href="https://leetcode.com/u/utkarsh-rwt/"
     target="_blank"
     rel="noreferrer"
-    className="flex items-center gap-3 rounded-xl border border-slate-200 px-5 py-3 transition hover:border-slate-400"
+    className="group flex items-center gap-3 rounded-xl border border-white/80 bg-white/65 px-5 py-3 shadow-[0_8px_22px_rgba(28,25,23,0.1),0_1px_3px_rgba(255,255,255,0.9)_inset] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-white hover:bg-white/80 hover:shadow-[0_14px_30px_rgba(28,25,23,0.15),0_1px_4px_rgba(255,255,255,0.95)_inset]"
   >
-    <SiLeetcode className="text-3xl text-[#FFA116]" />
+    <SiLeetcode className="text-3xl text-[#FFA116] transition-transform duration-300 group-hover:scale-110" />
     <div>
       <p className="font-semibold">LeetCode</p>
        <p className="text-sm text-slate-500">utkarsh-rwt</p>
@@ -141,9 +193,9 @@ useEffect(() => {
     href="https://codeforces.com/profile/utkarshrawat"
     target="_blank"
     rel="noreferrer"
-    className="flex items-center gap-3 rounded-xl border border-slate-200 px-5 py-3 transition hover:border-slate-400"
+    className="group flex items-center gap-3 rounded-xl border border-white/80 bg-white/65 px-5 py-3 shadow-[0_8px_22px_rgba(28,25,23,0.1),0_1px_3px_rgba(255,255,255,0.9)_inset] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-white hover:bg-white/80 hover:shadow-[0_14px_30px_rgba(28,25,23,0.15),0_1px_4px_rgba(255,255,255,0.95)_inset]"
   >
-    <SiCodeforces className="text-3xl text-[#1F8ACB]" />
+    <SiCodeforces className="text-3xl text-[#1F8ACB] transition-transform duration-300 group-hover:scale-110" />
     <div>
       <p className="font-semibold">Codeforces</p>
       <p className="text-sm text-slate-500">utkarshrawat</p>
@@ -155,9 +207,9 @@ useEffect(() => {
     href="https://www.codechef.com/users/utkarshrawat"
     target="_blank"
     rel="noreferrer"
-    className="flex items-center gap-3 rounded-xl border border-slate-200 px-5 py-3 transition hover:border-slate-400"
+    className="group flex items-center gap-3 rounded-xl border border-white/80 bg-white/65 px-5 py-3 shadow-[0_8px_22px_rgba(28,25,23,0.1),0_1px_3px_rgba(255,255,255,0.9)_inset] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-white hover:bg-white/80 hover:shadow-[0_14px_30px_rgba(28,25,23,0.15),0_1px_4px_rgba(255,255,255,0.95)_inset]"
   >
-    <SiCodechef className="text-3xl text-[#5B4638]" />
+    <SiCodechef className="text-3xl text-[#5B4638] transition-transform duration-300 group-hover:scale-110" />
     <div>
       <p className="font-semibold">CodeChef</p>
       <p className="text-sm text-slate-500">utkarshrawat</p>
@@ -166,7 +218,11 @@ useEffect(() => {
     </div>
   </a>
 
-</div>
+                </div>
+                <div className="mt-8 grid max-w-2xl gap-4 sm:grid-cols-2">
+                  <RatingChart title="Codeforces" points={codeforcesHistory} color="#1F8ACB" />
+                  <RatingChart title="CodeChef" points={codechefHistory} color="#8B5E3C" />
+                </div>
                
             </div>
 
@@ -254,7 +310,7 @@ useEffect(() => {
   {/* <Skill icon={<SiMysql className="text-5xl text-[#4479A1]" />} name="MySQL" /> */}
   {/* <Skill icon={<SiRedis className="text-5xl text-[#DC382D]" />} name="Redis" /> */}
 </div>
-       
+
         </div>
       </section>
 

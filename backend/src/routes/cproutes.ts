@@ -2,6 +2,7 @@ import  express  from "express";
 import { Router } from "express";
 import { addPullRequest, listPullRequests, refreshPullRequests } from "../controllers/openSource";
 import { getCachedRating } from "../controllers/ratings";
+import { getCachedRatingHistory } from "../controllers/ratingHistory";
 
 
 const router =  Router();
@@ -41,9 +42,24 @@ router.get('/codeforces/rating/:username',async (req,res)=>{
     }
     });
 
+router.get('/codeforces/rating-history/:username', async (req, res) => {
+    try {
+        res.json(await getCachedRatingHistory("codeforces", req.params.username));
+    } catch (error) {
+        res.status(502).json({
+            "error": error instanceof Error ? error.message : "Unable to fetch Codeforces rating history"
+        });
+    }
+    });
 
-
-
-
+router.get('/codechef/rating-history/:username', async (req, res) => {
+    try {
+        res.json(await getCachedRatingHistory("codechef", req.params.username));
+    } catch (error) {
+        res.status(502).json({
+            "error": error instanceof Error ? error.message : "Unable to fetch CodeChef rating history"
+        });
+    }
+    });
 
 export default router;

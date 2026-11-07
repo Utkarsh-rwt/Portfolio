@@ -35,7 +35,7 @@ const About = () => {
 							href="https://github.com/utkarsh-rwt"
 							target="_blank"
 							rel="noreferrer"
-							className="rounded-full border border-stone-300 bg-white px-4 py-2.5 text-sm font-semibold text-black transition hover:border-stone-400 hover:bg-stone-90 sm:px-5 sm:py-3"
+							className="min-w-28 rounded-xl border border-white/80 bg-white/70 px-5 py-3 text-center text-sm font-semibold text-black shadow-[0_8px_22px_rgba(28,25,23,0.1),0_1px_3px_rgba(255,255,255,0.9)_inset] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-white hover:bg-white/90 hover:shadow-[0_14px_30px_rgba(28,25,23,0.16),0_1px_4px_rgba(255,255,255,0.95)_inset] sm:px-6 sm:py-3.5"
 						>
 						
 							GitHub
@@ -44,7 +44,7 @@ const About = () => {
 							href="https://linkedin.com/in/utkarsh-rawat-68a409381"
 							target="_blank"
 							rel="noreferrer"
-							className="rounded-full border border-stone-300 bg-white px-4 py-2.5 text-sm font-semibold text-black transition hover:border-stone-400 hover:bg-stone-90 sm:px-5 sm:py-3"
+							className="min-w-28 rounded-xl border border-white/80 bg-white/70 px-5 py-3 text-center text-sm font-semibold text-black shadow-[0_8px_22px_rgba(28,25,23,0.1),0_1px_3px_rgba(255,255,255,0.9)_inset] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-white hover:bg-white/90 hover:shadow-[0_14px_30px_rgba(28,25,23,0.16),0_1px_4px_rgba(255,255,255,0.95)_inset] sm:px-6 sm:py-3.5"
 						>
 							LinkedIn
 						</a>
@@ -52,13 +52,13 @@ const About = () => {
 							href="https://x.com/debugomega"
 							target="_blank"
 							rel="noreferrer"
-							className="rounded-full border border-stone-300 bg-white px-4 py-2.5 text-sm font-semibold text-black transition hover:border-stone-400 hover:bg-stone-50 sm:px-5 sm:py-3"
+							className="min-w-16 rounded-xl border border-white/80 bg-white/70 px-3 py-3 text-center text-sm font-semibold text-black shadow-[0_8px_22px_rgba(28,25,23,0.1),0_1px_3px_rgba(255,255,255,0.9)_inset] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-white hover:bg-white/90 hover:shadow-[0_14px_30px_rgba(28,25,23,0.16),0_1px_4px_rgba(255,255,255,0.95)_inset] sm:px-4 sm:py-3.5"
 						>
 							X
 						</a>
 						<a
 							href="/resume.pdf"
-							className="rounded-full border border-stone-300 bg-[#fffaf0] px-4 py-2.5 text-sm font-semibold text-black transition hover:bg-[#f7f0e2] sm:px-5 sm:py-3"
+							className="min-w-28 rounded-xl border border-amber-100/90 bg-[#fffaf0]/80 px-5 py-3 text-center text-sm font-semibold text-black shadow-[0_8px_22px_rgba(120,85,30,0.12),0_1px_3px_rgba(255,255,255,0.9)_inset] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-200 hover:bg-[#fffaf0] hover:shadow-[0_14px_30px_rgba(120,85,30,0.18),0_1px_4px_rgba(255,255,255,0.95)_inset] sm:px-6 sm:py-3.5"
 						>
 							Resume
 						</a>
