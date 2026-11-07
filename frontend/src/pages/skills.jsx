@@ -56,7 +56,7 @@ import { Cable, Database, Table2, Workflow } from "lucide-react";
 
 const Skills = ()=>{
  
-  const backendUrl = import.meta.env.VITE_BACKEND_URL || `http://localhost:${import.meta.env.VITE_BACKEND_PORT || 5000}`;
+  const backendUrl = '';
   
 
 const [leetcodeRating, setLeetcodeRating] = useState(" fetching...")

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { ExternalLink, GitPullRequest } from 'lucide-react'
 import { motion } from 'motion/react'
 
-const API = 'http://localhost:5000/open-source/pull-requests'
+const API = '/open-source/pull-requests'
 
 const statusStyles = {
   open: 'bg-emerald-100 text-emerald-700',
