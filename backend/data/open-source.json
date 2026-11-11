@@ -1,5 +1,15 @@
 [
   {
+    "id": "openmrs-openmrs-contrib-cvss-scanning-94",
+    "link": "https://github.com/openmrs/openmrs-contrib-cvss-scanning/pull/94",
+    "org": "openmrs",
+    "repo": "openmrs-contrib-cvss-scanning",
+    "number": 94,
+    "date": "2026-11-08T00:00:00Z",
+    "status": "merged",
+    "title": "feat(O3-6146): Add summary cards and dynamic severity metrics"
+  },
+  {
     "id": "graylog2-graylog2-server-27798",
     "link": "https://github.com/Graylog2/graylog2-server/pull/27798",
     "org": "Graylog2",
@@ -9,8 +19,6 @@
     "status": "merged",
     "title": "Enable cross-region S3 access for GeoIP downloads"
   },
-  
-  
   {
     "id": "jgrapht-jgrapht-1396",
     "link": "https://github.com/jgrapht/jgrapht/pull/1396",
@@ -21,8 +29,6 @@
     "status": "merged",
     "title": "Avoid edge-set access in vertex checks"
   },
-  
-  
   {
     "id": "pacocartones-free-llm-api-hub-393",
     "link": "https://github.com/pacocartones/free-llm-api-hub/pull/393",
@@ -123,7 +129,6 @@
     "status": "merged",
     "title": "fix: resolve member not found on profile page"
   },
-
   {
     "id": "suhani1234-5-tourease-516",
     "link": "https://github.com/Suhani1234-5/TourEase/pull/516",
@@ -144,7 +149,6 @@
     "status": "open",
     "title": "fix dark mode reset"
   },
-  
   {
     "id": "shantanugupta43-suggestpilot-6",
     "link": "https://github.com/Shantanugupta43/SuggestPilot/pull/6",
